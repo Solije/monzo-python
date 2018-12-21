@@ -14,7 +14,7 @@ from oauthlib.oauth2 import TokenExpiredError
 from monzo.utils import save_token_to_file, load_token_from_file
 from monzo.errors import (BadRequestError, UnauthorizedError, ForbiddenError,
 MethodNotAllowedError, PageNotFoundError, NotAcceptibleError,
-TooManyRequestsError,InternalServerError, GatewayTimeoutError)
+TooManyRequestsError, InternalServerError, GatewayTimeoutError)
 from monzo.const import (CLIENT_ID, CLIENT_SECRET,
     ACCESS_TOKEN, REFRESH_TOKEN, EXPIRES_AT, MONZO_CACHE_FILE)
 
