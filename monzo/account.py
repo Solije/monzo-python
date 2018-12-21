@@ -9,10 +9,10 @@ class Account(dict):
         return "{}({!r})".format(self.__class__.__name__, dict(self))
 
     def is_open(self):
-        return(not self['closed'])
+        return not self['closed']
 
     def is_joint(self):
-        return(self['account_type'] == 'uk_retail_joint')
+        return self['account_type'] == 'uk_retail_joint'
 
 class Pot(dict):
 
@@ -20,13 +20,13 @@ class Pot(dict):
         return "{}({!r})".format(self.__class__.__name__, dict(self))
 
     def is_open(self):
-        return(not self['deleted'])
+        return not self['deleted']
 
     def rounds_up_transactions(self):
-        return(self['round_up'])
+        return self['round_up']
 
     def has_goal(self):
-        return('goal_amount' in self.keys())
+        return 'goal_amount' in self.keys()
 
     def has_reached_goal(self):
-        return(self['goal_amount'] <= self['balance'])
+        return self['goal_amount'] <= self['balance']

@@ -15,7 +15,7 @@ class Transaction(dict):
         return "{}({!r})".format(self.__class__.__name__, dict(self))
 
     def can_split_bill(self):
-        return(self['can_split_the_bill'])
+        return self['can_split_the_bill']
 
 
 class TransactionList(dict):
