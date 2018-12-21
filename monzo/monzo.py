@@ -239,8 +239,7 @@ class Monzo(object):
     def get_pot(self, pot_id):
         """Get pots for a user. (https://monzo.com/docs/#list-pots)
 
-           :rtype: A Dictionary representation of pot.
-
+           :rtype: A Dictionary representation of pot. Returns None if pot not found.
         """
         pots = self.get_pots()
         return(next((pot for pot in pots if pot['id'] == pot_id), None))
