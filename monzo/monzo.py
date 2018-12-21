@@ -249,7 +249,7 @@ class Monzo(object):
 
            :rtype: A collection of open pots for a user.
         """
-        return [pot for pot in self.get_pots() if (pot.is_open() == True)]
+        return [pot for pot in self.get_pots() if pot.is_open()]
 
     def deposit_into_pot(self, pot_id, account_id, amount_in_pennies):
         """Move money from an account into a pot. (https://monzo.com/docs/#deposit-into-a-pot)
