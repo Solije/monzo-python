@@ -184,8 +184,8 @@ class Monzo(object):
         """
         url = "{0}/attachment/register".format(self.API_URL)
         data = {'external_id': transaction_id,
-              'file_url': file_url,
-              'file_type': file_type}
+                'file_url': file_url,
+                'file_type': file_type}
         response = self.oauth_session.make_request(url,data=data)
         return response
 
