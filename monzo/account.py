@@ -1,6 +1,7 @@
-"""A data class representing a Monzo current account
+"""Data classes representing a Monzo current account or pot
 
-This module contains the class `Account` which represents a prepaid or retail Monzo account
+This module contains the class `Account` which represents a prepaid or retail
+Monzo account and `Pot` representing a Monzo Pot.
 """
 
 class Account(dict):
