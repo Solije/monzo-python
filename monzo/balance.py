@@ -11,13 +11,13 @@ class Balance(dict):
     def spending_nonstandard_currency(self):
         return self['local_currency'] != self['currency'] and self['local_currency'] != ''
 
-    def exhange_rate_to_local_currency(self):
+    def exchange_rate_to_local_currency(self):
         # Can't complete this as I can't see how it is displayed in API
         # Depending on this, the implementations of these methods may be switched
 
         # return(self['local_exchange_rate'])
         raise NotImplementedError
 
-    def exhange_rate_from_local_currency(self):
+    def exchange_rate_from_local_currency(self):
         # return(1/self['local_exchange_rate'])
         raise NotImplementedError
