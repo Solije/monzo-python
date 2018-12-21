@@ -1,6 +1,6 @@
 """A data class representing a Monzo current account balance
 
-This module contains the class `Balance` which represents a prepaid or retail Monzo account
+This module contains the class `Balance` which represents the balance of a Monzo account
 """
 
 class Balance(dict):
@@ -9,7 +9,7 @@ class Balance(dict):
         return "{}({!r})".format(self.__class__.__name__, dict(self))
 
     def spending_nonstandard_currency(self):
-        return(self['local_currency'] != self['currency'] and self['local_currency'] != '')
+        return self['local_currency'] != self['currency'] and self['local_currency'] != ''
 
     def exhange_rate_to_local_currency(self):
         # Can't complete this as I can't see how it is displayed in API
